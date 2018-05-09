@@ -24,9 +24,7 @@ public:
     IllegalCoordinateException(pairs couple) {
       this -> pair = couple;
   }
-    ~IllegalCoordinateException(){
-        
-    }
+   
   
   string theCoordinate() const {
       
@@ -46,10 +44,7 @@ public:
       this -> c = theChar;
     }
   
-   ~IllegalCharException(){
-    }
-  
-  char theChar() const {
+    char theChar() const {
     return this -> c;
   }
   

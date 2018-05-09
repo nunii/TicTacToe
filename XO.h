@@ -21,7 +21,7 @@ class X_O{
         inline void setO() {curr ='O';}
         inline void setX() {curr ='X';}
         inline void setDot() {curr ='.';}
-        inline char getChar() {return curr;}
+        inline char getChar() {return this-> curr;}
         inline operator char() const{
                 return curr;
             }

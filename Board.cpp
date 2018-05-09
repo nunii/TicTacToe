@@ -22,34 +22,17 @@ Board :: Board(const Board& other){
     
 }
 
-  /*Board :: ~Board(){
-    for(int i = 0; i < (this-> length); i++){
-		delete [] board[i];
-	}
-	delete [] board;
-}*/
-
-/*string Board :: toString()const{
-    string s;
-    for(int i=0; i<length ; i++){
-        for(int j=0; j<length; j++){
-            s += (board[i][j].getChar());
-        }
-        s+='\n';
-    }
-    return s;
-}*/
-
-ostream& operator<<(ostream& out, Board& b)
-{
-   for(int i = 0; i < b.getLength(); i++){
-			for(int j = 0; j < b.getLength(); j++ ){
-				out << (b.board[i][j]).getChar();
-			}
-			out << endl;
-		}
-        return out;
+  Board :: ~Board(){
+    rmv();
 }
+
+void Board :: rmv(){
+    for(int i = 0; i < length; i++)
+		delete [] board[i];
+	delete [] board; 
+}
+
+
 
 void Board :: reset()
 {
@@ -64,17 +47,19 @@ Board& Board :: operator=(const Board& other){
     if(this -> length != other.getLength()){
         cout << "boards are not the same size!" << endl;
     }
+    if(this == &other) return *this;
+    rmv();	
     
-    else{
-        for(int i=0; i<this -> length ; i++){
-            for(int j=0; j<this -> length; j++){
-              
-                char c = other.board[i][j].getChar();
-                this -> fill(c,i,j);
-            }
-        }
-        return *this;
+    
+        length = other.length;
+        board = new X_O*[length];
+        for(int i = 0; i < (this-> length); i++){
+	    board[i] = new X_O[length];
+    	     for(int j = 0; j < (this-> length); j++)
+    	       (this-> board[i][j]) = other.board[i][j];
     }
+        return *this;
+    
 }
 
 char Board :: operator=(char c){
