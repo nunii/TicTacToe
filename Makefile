@@ -1,17 +1,18 @@
-CXX=clang++-5.0
-CPPFLAGS=-std=c++17 
+CCX=g++ -std=c++11
 
-all: Board.o XO.o exceptions.o
+
+a.out: Board.o XO.o exceptions.o 
+		$(CCX) main.cpp *.o
 		
 Board.o: Board.cpp Board.h
-		$(CXX) -c Board.cpp -o Board.o
+		$(CCX) -c Board.cpp
 		
 XO.o: XO.cpp XO.h
-		$(CXX) -c XO.cpp -o XO.o
+		$(CCX) -c XO.cpp
 		
 
 exceptions.o: exceptions.h 
-		$(CXX) -c exceptions.h -o exceptions.o
+		$(CCX) -c exceptions.h
 		
 Clean:
 		rm *.o a.out
