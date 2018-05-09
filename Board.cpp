@@ -49,8 +49,6 @@ Board& Board :: operator=(const Board& other){
     }
     if(this == &other) return *this;
     rmv();	
-    
-    
         length = other.length;
         board = new X_O*[length];
         for(int i = 0; i < (this-> length); i++){
@@ -61,15 +59,24 @@ Board& Board :: operator=(const Board& other){
         return *this;
     
 }
+/*
+char Board :: operator= (char symbol){
+    if(symbol == '.'){ fill(symbol); }
+    else if (symbol != 'X' && symbol != 'O'){
+        IllegalCharException ichar;
+        ichar.set_illegal(symbol);
+        throw ichar; }
+    return symbol;
+}
 
+*/
 char Board :: operator=(char c){
     
     if(c=='.'){
         this -> reset();
     }
-    else {
+    else if (c != 'X' && c!= 'O'){
         throw IllegalCharException(c);
-         return c;
     }
     
     return c;    
