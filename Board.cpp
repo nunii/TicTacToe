@@ -1,8 +1,5 @@
-#ifndef BOARD_CPP
-#define BOARD_CPP
 #include "Board.h"
-#endif
-
+#include "exceptions.h"
 using namespace std;
 
 Board :: Board(int len){
@@ -42,6 +39,26 @@ Board :: Board(const Board& other){
     }
     return s;
 }*/
+
+ostream& operator<<(ostream& out, Board& b)
+{
+   for(int i = 0; i < b.getLength(); i++){
+			for(int j = 0; j < b.getLength(); j++ ){
+				out << (b.board[i][j]).getChar();
+			}
+			out << endl;
+		}
+        return out;
+}
+
+void Board :: reset()
+{
+                for(int i=0; i<this ->getLength() ; i++){
+                    for(int j=0; j<this ->getLength(); j++){
+                        board[i][j].setDot();
+                    }
+                }
+            }
 
 Board& Board :: operator=(const Board& other){
     if(this -> length != other.getLength()){

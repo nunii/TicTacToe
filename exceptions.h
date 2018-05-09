@@ -6,8 +6,6 @@
 #include <sstream>
 #include <exception>
 using namespace std;
-#endif
-
 
 
 
@@ -57,7 +55,4 @@ public:
   
  };
 
-
-
-
-
+#endif

@@ -1,16 +1,15 @@
 CCX=g++ -std=c++11
 
+all: Board.o XO.o exceptions.o
+		
+Board.o: Board.cpp Board.h XO.h
+		$(CCX) -c Board.cpp -o Board.o
+		
+XO.o: XO.cpp XO.h Board.h
+		$(CCX) -c XO.cpp -o XO.o
 
-a.out: Board.o X_O.o Exceptions.o 
-		$(CCX) main.cpp *.o
-		
-Board.o: Board.cpp Board.h
-		$(CCX) -c Board.cpp
-		
-X_O.o: X_O.cpp X_O.h
-		$(CCX) -c X_O.cpp
-		
-Exceptions.o: 
-		$(CCX) -c exceptions.h
+exceptions.o: exceptions.h
+		$(CCX) -c exceptions.h -o exceptions.o
 		
 Clean:
+	rm *.o 
