@@ -44,12 +44,12 @@ void Board :: reset()
             }
 
 Board& Board :: operator=(const Board& other){
-    if(this -> length != other.getLength()){
+  /*  if(this -> length != other.getLength()){
         cout << "boards are not the same size!" << endl;
-    }
+    }*/
     if(this == &other) return *this;
     rmv();	
-        length = other.length;
+        length = other.getLength();
         board = new X_O*[length];
         for(int i = 0; i < (this-> length); i++){
 	    board[i] = new X_O[length];
