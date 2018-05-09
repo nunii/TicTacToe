@@ -5,9 +5,9 @@ using namespace std;
 Board :: Board(int len){
     this -> length = len;
     this -> place = {0,0};
-    board = new X_O*[length];
+    this -> board = new X_O*[length];
     for (int i = 0; i < length; ++i)
-        board[i] = new X_O[length];
+        this-> board[i] = new X_O[length];
     this->reset(); // maybe not necessary
 }
 
@@ -18,7 +18,9 @@ Board :: Board(const Board& other){
     board = new X_O*[length];
     for (int i = 0; i < length; ++i)
          board[i] = new X_O[length];
-    this->reset(); // maybe not necessary
+    for(int i = 0; i < (this-> length); i++)
+    	 for(int j = 0; j < (this-> length); j++)
+		(this-> board[i][j]) = other.board[i][j].geChar();
     
 }
 
@@ -49,8 +51,8 @@ Board& Board :: operator=(const Board& other){
     }*/
     if(this == &other) return *this;
     rmv();	
-        length = other.getLength();
-        board = new X_O*[length];
+    this-> length = other.getLength();
+    this-> board = new X_O*[length];
         for(int i = 0; i < (this-> length); i++){
 	    board[i] = new X_O[length];
     	     for(int j = 0; j < (this-> length); j++)
