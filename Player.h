@@ -14,8 +14,8 @@ class Player {
         
         char getChar() const {return myChar;}
         const void setChar(char c) {myChar=c;}
-        virtual const string name() const;
-        virtual const Coordinate play(const Board&);
+        virtual const string name() const=0;
+        virtual const Coordinate play(const Board&)=0;
         
     
 };
