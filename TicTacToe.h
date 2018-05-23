@@ -1,7 +1,7 @@
 #ifndef _TICTACTOE_H
 #define _TICTACTOE_H
 //#include "Board.h"
-#include "player.h"
+#include "Player.h"
 #include "DummyPlayers.h"
 #include "Champion.h"
 #include "Board.h"
