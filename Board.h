@@ -1,5 +1,4 @@
-#ifndef BOARD_H
-#define BOARD_H
+#pragma once
 #include "XO.h"
 #include "exceptions.h"
 using namespace std;
@@ -50,5 +49,3 @@ inline ostream& operator<<(ostream& out,const Board& b)
 }
  
     
-#endif
-
