@@ -1,5 +1,4 @@
-#ifndef XO_H
-#define XO_H
+#pragma once
 #include "exceptions.h"
 //using namespace std;
 
@@ -39,4 +38,4 @@ inline bool operator==(const char& c,X_O x){ return c == x.getChar(); }
 inline bool operator!=(const char& c,X_O x){ return c != x.getChar();}    
     
 
-#endif //X_O_H
+//X_O_H
