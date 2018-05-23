@@ -1,7 +1,5 @@
 #pragma once
 #include "Player.h"
-#include "Board.h"
-#include "exceptions.h"
 
 
 class Champion: public Player {
