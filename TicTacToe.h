@@ -1,8 +1,11 @@
 #ifndef _TICTACTOE_H
 #define _TICTACTOE_H
 //#include "Board.h"
+#include "player.h"
 #include "DummyPlayers.h"
 #include "Champion.h"
+#include "Board.h"
+#include "exceptions.h"
 
 // this class runs the game, the players are returning coordinate 
 //and here we are placing the chars at those cordinates.
