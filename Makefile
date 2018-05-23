@@ -1,8 +1,8 @@
 CCX=g++ -std=c++11
 
 
-a.out: Board.o XO.o exceptions.o Player.o DummyPlayers.o Champion.o TicTacToe.o
-		$(CCX) main.cpp *.o
+all: Board.o XO.o exceptions.o Player.o DummyPlayers.o Champion.o TicTacToe.o
+		
 		
 Board.o: Board.cpp Board.h
 		$(CCX) -c Board.cpp
