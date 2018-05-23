@@ -63,7 +63,7 @@
                //     stepCount++;
                     if(check()){
                         EndOfGame = true;
-                        winner = fir;
+                        this->Winner = fir;
                     }
                     firTurn=false;
                     }
@@ -83,7 +83,7 @@
                 game_board[this->last] = 'O';
                 if(check()){
                     EndOfGame = true;
-                    winner = sec;
+                   this->Winner = sec;
                 }
                 secTurn=false;
                 }
