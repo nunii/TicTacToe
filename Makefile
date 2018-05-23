@@ -1,30 +1,30 @@
-CXX=clang++-5.0
-CPPFLAGS=-std=c++17 
+CCX=g++ -std=c++11
 
-all: Board.o XO.o exceptions.o Player.o DummyPlayers.o Champion.o TicTacToe.o
-		
+
+a.out: Board.o XO.o exceptions.o Player.o DummyPlayers.o Champion.o TicTacToe.o
+		$(CCX) main.cpp *.o
 		
 Board.o: Board.cpp Board.h
-		$(CXX) $(CPPFLAGS) --compile Board.cpp -o Board.o
+		$(CCX) -c Board.cpp
 		
 XO.o: XO.cpp XO.h
-		$(CXX) $(CPPFLAGS) --compile XO.cpp -o XO.o
+		$(CCX) -c XO.cpp
 		
 
 exceptions.o: exceptions.h 
-		$(CXX) $(CPPFLAGS) --compile exceptions.h -o exceptions.o
+		$(CCX) -c exceptions.h
 
 Player.o: Player.h
-		$(CXX) $(CPPFLAGS) --compile Player.h -o Player.o
+		$(CCX) -c Player.h
 
 DummyPlayers.o: DummyPlayers.cpp DummyPlayers.h
-		$(CXX) $(CPPFLAGS) --compile DummyPlayers.cpp -o DummyPlayers.o
+		$(CCX) -c DummyPlayers.cpp
 
 Champion.o: Champion.cpp Champion.h
-		$(CXX) $(CPPFLAGS) --compile Champion.cpp -o Champion.o
-		
+		$(CCX) -c Champion.cpp
+
 TicTacToe.o: TicTacToe.cpp TicTacToe.h
-		$(CXX) $(CPPFLAGS) --compile Champion.cpp -o Champion.o
+		$(CCX) -c TicTacToe.cpp
 
 Clean:
 		rm *.o a.out
