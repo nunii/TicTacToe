@@ -54,7 +54,7 @@
                 this-> last = fir.play(this->game_board);
                 if(game_board[this->last]!='.'){
                     throw IllegalCoordinateException(this->last);
-                    this -> Winner = sec;
+                    this -> Winner = &sec;
                     //this -> sign = 'X';
                     return;
                 } 
@@ -63,7 +63,7 @@
                //     stepCount++;
                     if(check()){
                         EndOfGame = true;
-                        this->Winner = fir;
+                        this->Winner = &fir;
                     }
                     firTurn=false;
                     }
@@ -75,7 +75,7 @@
                 this-> last = sec.play(this->game_board);
                 if(game_board[this->last]!='.'){ // if player is trying to cheat, throw error. and other player wins.
                     throw IllegalCoordinateException(this->last);
-                    this -> Winner = fir;
+                    this -> Winner = &fir;
                     //this -> sign = 'O';
                     return;
                 }
@@ -83,7 +83,7 @@
                 game_board[this->last] = 'O';
                 if(check()){
                     EndOfGame = true;
-                   this->Winner = sec;
+                   this->Winner = &sec;
                 }
                 secTurn=false;
                 }
