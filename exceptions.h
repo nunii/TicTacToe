@@ -1,5 +1,4 @@
-#ifndef EXCEPTIONS_HPP
-#define EXCEPTIONS_HPP
+#pragma once
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -70,4 +69,3 @@ public:
   
  };
 
-#endif
