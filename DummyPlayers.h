@@ -1,5 +1,4 @@
-#ifndef _DUMMYPLAYERS_H
-#define _DUMMYPLAYERS_H
+
 #pragma once
 #include "Player.h"
 
@@ -55,4 +54,3 @@ public:
 };
 
 
-#endif
