@@ -106,7 +106,7 @@ char Board :: operator=(char c){
 
 X_O& Board :: operator[](const Coordinate c)const
 {
-  if((c.i >= this -> size() || c.j >= this -> size())
+  if(c.i >= this -> size() || c.j >= this -> size())
      {
       throw (IllegalCoordinateException(c));
    }
