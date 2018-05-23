@@ -1,7 +1,8 @@
 #ifndef _CHAMPION_H
 #define _CHAMPION_H
 #include "Player.h"
-
+#include "Board.h"
+#include "exceptions.h"
 
 
 class Champion: public Player {
