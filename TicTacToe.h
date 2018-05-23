@@ -36,5 +36,4 @@
             inline Board board()const{return game_board;}
             
     };
-            
-#endif
+     
