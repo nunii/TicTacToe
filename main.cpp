@@ -1,7 +1,7 @@
 #include "TicTacToe.h"
 #include "DummyPlayers.h"
-
-//#include "Champion.h"*/
+#include "Champion.h"
+using namespace std;
 
 void printResults(const TicTacToe& game) {
 	cout << endl << "The final board is " << endl << game.board();
