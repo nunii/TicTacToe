@@ -5,9 +5,10 @@
 using namespace std;
 
 class Player {
-    protected:
-        char myChar;
+    //protected:
+        
     public:
+        char myChar;    
         Player(): myChar('.') {}
         Player(char sign): myChar(sign) {}
         
