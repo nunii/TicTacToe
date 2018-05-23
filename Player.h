@@ -1,5 +1,4 @@
-#ifndef _PLAYER_H
-#define _PLAYER_H
+#pragma once
 #include "Board.h"
 #include "XO.h"
 #include "exceptions.h"
@@ -17,6 +16,3 @@ class Player {
     
 };
 
-
-
-#endif
