@@ -90,6 +90,7 @@ Board& Board :: operator=(const Board& other){
         return *this;
     
 }
+	return *this;
 }
 char Board :: operator=(char c){
     
