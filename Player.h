@@ -1,6 +1,8 @@
 #ifndef _PLAYER_H
 #define _PLAYER_H
 #include "Board.h"
+#include "XO.h"
+#include "exceptions.h"
 
 class Player {
     protected:
