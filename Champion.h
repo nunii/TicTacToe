@@ -1,5 +1,4 @@
-#ifndef _CHAMPION_H
-#define _CHAMPION_H
+#pragma once
 #include "Player.h"
 #include "Board.h"
 #include "exceptions.h"
@@ -19,4 +18,3 @@ public:
 };
 
 
-#endif
