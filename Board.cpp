@@ -15,9 +15,9 @@ Board :: Board(int len){
     for (int i = 0; i < Size; ++i)
         board[i] = new X_O[Size];
 
-    this -> board = new X_O*[length];
-    for (int i = 0; i < length; ++i)
-        this-> board[i] = new X_O[length];
+    this -> board = new X_O*[Size];
+    for (int i = 0; i < Size; ++i)
+        this-> board[i] = new X_O[Size];
 
     this->reset(); // maybe not necessary
 }
@@ -32,11 +32,11 @@ Board :: Board(const Board& other){
          board[i] = new X_O[Size];
     this->reset(); // maybe not necessary
 
-    board = new X_O*[length];
-    for (int i = 0; i < length; ++i)
-         board[i] = new X_O[length];
-    for(int i = 0; i < (this-> length); i++)
-    	 for(int j = 0; j < (this-> length); j++)
+    board = new X_O*[Size];
+    for (int i = 0; i < Size; ++i)
+         board[i] = new X_O[Size];
+    for(int i = 0; i < (this-> Size); i++)
+    	 for(int j = 0; j < (this-> Size); j++)
 		(this-> board[i][j]) = other.board[i][j].getChar();
 
     
@@ -64,7 +64,7 @@ void Board :: reset()
             }
 
 Board& Board :: operator=(const Board& other){
-<<<<<<< HEAD
+
     if(this -> Size != other.size()){
         cout << "boards are not the same Size!" << endl;
     }
@@ -74,25 +74,23 @@ Board& Board :: operator=(const Board& other){
         board = new X_O*[Size];
         for(int i = 0; i < (this-> Size); i++){
 	    board[i] = new X_O[Size];
-    	     for(int j = 0; j < (this-> Size); j++)
-
-  /*  if(this -> length != other.getLength()){
-        cout << "boards are not the same size!" << endl;
-    }*/
-    if(this == &other) return *this;
-    rmv();	
-    this-> length = other.getLength();
-    this-> board = new X_O*[length];
-        for(int i = 0; i < (this-> length); i++){
-	    board[i] = new X_O[length];
-    	     for(int j = 0; j < (this-> length); j++)
+    	     for(int j = 0; j < (this-> Size); j++){
+                 if(this == &other) return *this;
+                 rmv();	
+                 this-> Size = other.size();
+                 this-> board = new X_O*[Size];
+    	     }
+        }
+        for(int i = 0; i < (this-> Size); i++){
+	    board[i] = new X_O[Size];
+    	     for(int j = 0; j < (this-> Size); j++){
 
     	       (this-> board[i][j]) = other.board[i][j];
     }
         return *this;
     
 }
-
+}
 char Board :: operator=(char c){
     
     if(c=='.'){
@@ -104,10 +102,7 @@ char Board :: operator=(char c){
     
     return c;    
 }
-/*
-char& Board :: operator[](const Coordinate c){
-  return board[c.i][c.j];  
-}*/
+
 
 X_O& Board :: operator[](const Coordinate c)const
 {
@@ -119,8 +114,5 @@ X_O& Board :: operator[](const Coordinate c)const
   
 
     return board[c.i][c.j];
-}
-
-    return board[pair.i][pair.j];
 }
 
