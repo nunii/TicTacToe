@@ -46,9 +46,12 @@ const Coordinate Champion :: playFirst(const Board& board){	// this func is play
     	}
 
 	}
+	return cc;
 }
 
 const Coordinate Champion :: playSecond(const Board& board){
+	
+	Coordinate cc{0,0};
 	
 	if((board[{0,1}]=='.')&&(board[{1,0}]=='.')){
 		Coordinate c{0,1};
@@ -85,4 +88,5 @@ const Coordinate Champion :: playSecond(const Board& board){
 		Coordinate c{x,y};
 		if(board[c]=='.') return c;
 	}*/
+	return cc;
 }
