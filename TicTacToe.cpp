@@ -61,7 +61,10 @@
                 else {
                     game_board[this->last] = 'X';
                //     stepCount++;
-                    if(check()) EndOfGame = true;
+                    if(check()){
+                        EndOfGame = true;
+                        winner = fir;
+                    }
                     firTurn=false;
                     }
             }
@@ -78,7 +81,10 @@
                 }
                 else {
                 game_board[this->last] = 'O';
-                if(check()) EndOfGame = true;
+                if(check()){
+                    EndOfGame = true;
+                    winner = sec;
+                }
                 secTurn=false;
                 }
             }
