@@ -1,7 +1,7 @@
 #ifndef XO_H
 #define XO_H
 #include "exceptions.h"
-using namespace std;
+//using namespace std;
 
 class X_O{
     char curr;

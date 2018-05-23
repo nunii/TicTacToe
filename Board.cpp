@@ -2,22 +2,27 @@
 #include "exceptions.h"
 using namespace std;
 
+
+
+
+
+
 Board :: Board(int len){
-    this -> length = len;
+    this -> Size = len;
     this -> place = {0,0};
-    board = new X_O*[length];
-    for (int i = 0; i < length; ++i)
-        board[i] = new X_O[length];
+    board = new X_O*[Size];
+    for (int i = 0; i < Size; ++i)
+        board[i] = new X_O[Size];
     this->reset(); // maybe not necessary
 }
 
 Board :: Board(const Board& other){
-   this -> length  = other.getLength();
+   this -> Size  = other.size();
    this -> place = {0,0};
     
-    board = new X_O*[length];
-    for (int i = 0; i < length; ++i)
-         board[i] = new X_O[length];
+    board = new X_O*[Size];
+    for (int i = 0; i < Size; ++i)
+         board[i] = new X_O[Size];
     this->reset(); // maybe not necessary
     
 }
@@ -27,7 +32,7 @@ Board :: Board(const Board& other){
 }
 
 void Board :: rmv(){
-    for(int i = 0; i < length; i++)
+    for(int i = 0; i < Size; i++)
 		delete [] board[i];
 	delete [] board; 
 }
@@ -36,40 +41,30 @@ void Board :: rmv(){
 
 void Board :: reset()
 {
-                for(int i=0; i<this ->getLength() ; i++){
-                    for(int j=0; j<this ->getLength(); j++){
+                for(int i=0; i<this ->size() ; i++){
+                    for(int j=0; j<this ->size(); j++){
                         board[i][j].setDot();
                     }
                 }
             }
 
 Board& Board :: operator=(const Board& other){
-    if(this -> length != other.getLength()){
-        cout << "boards are not the same size!" << endl;
+    if(this -> Size != other.size()){
+        cout << "boards are not the same Size!" << endl;
     }
     if(this == &other) return *this;
     rmv();	
-        length = other.length;
-        board = new X_O*[length];
-        for(int i = 0; i < (this-> length); i++){
-	    board[i] = new X_O[length];
-    	     for(int j = 0; j < (this-> length); j++)
+        Size = other.Size;
+        board = new X_O*[Size];
+        for(int i = 0; i < (this-> Size); i++){
+	    board[i] = new X_O[Size];
+    	     for(int j = 0; j < (this-> Size); j++)
     	       (this-> board[i][j]) = other.board[i][j];
     }
         return *this;
     
 }
-/*
-char Board :: operator= (char symbol){
-    if(symbol == '.'){ fill(symbol); }
-    else if (symbol != 'X' && symbol != 'O'){
-        IllegalCharException ichar;
-        ichar.set_illegal(symbol);
-        throw ichar; }
-    return symbol;
-}
 
-*/
 char Board :: operator=(char c){
     
     if(c=='.'){
@@ -81,15 +76,18 @@ char Board :: operator=(char c){
     
     return c;    
 }
+/*
+char& Board :: operator[](const Coordinate c){
+  return board[c.i][c.j];  
+}*/
 
-
-X_O& Board :: operator[](const pairs pair)
+X_O& Board :: operator[](const Coordinate c)const
 {
-  if((pair.i >= this -> getLength() || pair.j >= this -> getLength()) ||
-     (pair.i < 0 || pair.j <0))
+  if((c.i >= this -> size() || c.j >= this -> size()) ||
+     (c.i < 0 || c.j <0))
      {
-      throw (IllegalCoordinateException(pair));
+      throw (IllegalCoordinateException(c));
    }
   
-    return board[pair.i][pair.j];
+    return board[c.i][c.j];
 }
