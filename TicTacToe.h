@@ -22,7 +22,7 @@
         private:
             Coordinate last;
             Board game_board;
-            Player Winner;
+            Player* Winner;
             //char sign;
         public:
           //  static int stepCount=0;
@@ -30,7 +30,7 @@
             void play(Player&,Player&);
             bool check();
             
-            inline Player winner()const{return Winner;}
+            inline Player& winner()const{return Winner;}
             inline string name()const{return Winner.name();}
             //inline char getChar(){return sign;}
             inline Board board()const{return game_board;}
