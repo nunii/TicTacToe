@@ -1,9 +1,9 @@
-
+#pragma once
 
 #include <string>
 #include <iostream>
 #include "Board.h"
-using namespace std;
+//using namespace std;
 
 class Player {
     //protected:
