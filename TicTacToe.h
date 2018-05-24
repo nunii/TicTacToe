@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Champion.h"
+#include "DummyPlayers.h"
 #include "Board.h"
 
 
