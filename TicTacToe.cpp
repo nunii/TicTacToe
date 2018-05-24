@@ -1,7 +1,7 @@
 #include "TicTacToe.h"
 
 
-    TicTacToe :: TicTacToe(int size){
+    TicTacToe :: TicTacToe(uint size){
         Board newBoard(size);
         game_board = newBoard;
     }
