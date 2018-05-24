@@ -1,11 +1,8 @@
 #include "TicTacToe.h"
 
-/*
-    TicTacToe :: TicTacToe(uint size){
-        Board newBoard(size);
-        game_board = newBoard;
-    }*/
-    
+const Board& TicTacToe :: board()const{
+    return game_board;
+}
     bool TicTacToe :: check(){
         //check row:
         uint x = last.i, y=0;
