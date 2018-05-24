@@ -1,5 +1,4 @@
 #include "XO.h"
-#include "exceptions.h"
 
 X_O :: X_O(){
             this -> curr='.';
