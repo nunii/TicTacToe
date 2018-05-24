@@ -1,3 +1,5 @@
+#pragma once
+
 #include "DummyPlayers.h"
 
 
