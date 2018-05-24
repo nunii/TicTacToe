@@ -3,7 +3,7 @@
 
     TicTacToe :: TicTacToe(int size){
         Board newBoard(size);
-        this -> game_board = newBoard;
+        game_board = newBoard;
     }
     
     bool TicTacToe :: check(){
