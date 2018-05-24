@@ -16,7 +16,7 @@
             TicTacToe(const int size):game_board(size),Winner() {} 
             void play(Player&,Player&);
             bool check();
-            const Board& board()const{return game_board;};
+            const Board& board()const;
             inline Player& winner()const{return *this->Winner;}
             inline string name()const{return Winner->name();}
             //inline char getChar(){return sign;}
