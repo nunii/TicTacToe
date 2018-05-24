@@ -1,6 +1,5 @@
 #include "TicTacToe.h"
-#include "DummyPlayers.h"
-#include "Champion.h"
+
 using namespace std;
 
 void printResults(const TicTacToe& game) {
