@@ -1,5 +1,5 @@
 #pragma once
-#include "Player.h"
+#include "DummyPlayers.h"
 
 
 class Champion: public Player {
@@ -14,5 +14,3 @@ public:
 	const Coordinate playFirst(const Board&);
 	const Coordinate playSecond(const Board&);
 };
-
-
