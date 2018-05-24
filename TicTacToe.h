@@ -1,4 +1,3 @@
-#pragma once
 #include "Champion.h"
 #include "Board.h"
 
