@@ -26,7 +26,8 @@
             //char sign;
         public:
           //  static int stepCount=0;
-            TicTacToe(uint);
+            //TicTacToe(uint);
+            TicTacToe(const int size):game_board(size),Winner() {} 
             void play(Player&,Player&);
             bool check();
             
