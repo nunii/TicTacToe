@@ -1,6 +1,6 @@
 #pragma once
 #include "XO.h"
-#include "exceptions.h"
+
 using namespace std;
 using pairs=Coordinate;
 
@@ -47,5 +47,3 @@ inline ostream& operator<<(ostream& out,const Board& b)
 		}
         return out;
 }
- 
-    
