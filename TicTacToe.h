@@ -19,8 +19,8 @@
             const Board& board()const;
             inline Player& winner()const{return *this->Winner;}
             inline string name()const{return Winner->name();}
-            //inline char getChar(){return sign;}
-            inline Board board()const{return game_board;}
+            
+           
             
     };
      
