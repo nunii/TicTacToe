@@ -1,10 +1,6 @@
 #include "Board.h"
-#include "exceptions.h"
+
 using namespace std;
-
-
-
-
 
 
 Board :: Board(int len){
@@ -115,4 +111,3 @@ X_O& Board :: operator[](const Coordinate c)const
 
     return board[c.i][c.j];
 }
-
