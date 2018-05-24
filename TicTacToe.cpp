@@ -1,10 +1,10 @@
 #include "TicTacToe.h"
 
-
+/*
     TicTacToe :: TicTacToe(uint size){
         Board newBoard(size);
         game_board = newBoard;
-    }
+    }*/
     
     bool TicTacToe :: check(){
         //check row:
