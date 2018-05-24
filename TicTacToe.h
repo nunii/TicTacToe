@@ -1,8 +1,7 @@
 #pragma once
-#include "DummyPlayers.h"
 #include "Champion.h"
 #include "Board.h"
-#include "exceptions.h"
+
 
     class TicTacToe{
         
@@ -22,5 +21,4 @@
             //inline char getChar(){return sign;}
            // inline Board board()const{return game_board;}
             
-    };
-     
+};
