@@ -26,7 +26,7 @@
             //char sign;
         public:
           //  static int stepCount=0;
-            TicTacToe(int);
+            TicTacToe(uint);
             void play(Player&,Player&);
             bool check();
             
