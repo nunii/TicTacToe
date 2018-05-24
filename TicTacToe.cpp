@@ -8,7 +8,7 @@ const Board& TicTacToe :: board()const{
         uint x = last.i, y=0;
         char c = this->game_board[last];
         bool check = (game_board[{x,y}]==c);
-        while(y<game_board.size()&&check){
+        while(y<(game_board.size()-1)&&check){
             y++;
             check = (game_board[{x,y}]==c);
         }
@@ -18,7 +18,7 @@ const Board& TicTacToe :: board()const{
          x = last.j; y=0;
          c = this->game_board[last];
          check = (game_board[{y,x}]==c);
-        while(y<game_board.size()&&check){
+        while(y<(game_board.size()-1)&&check){
             y++;
             check = (game_board[{y,x}]==c);
         }
@@ -28,7 +28,7 @@ const Board& TicTacToe :: board()const{
          x=0;y=0;
          c = this->game_board[last];
          check = (game_board[{x,y}]==c);
-        while(y<game_board.size()&&check){
+        while(y<(game_board.size()-1)&&check){
             y++;
             x++;
             check = (game_board[{x,y}]==c);
