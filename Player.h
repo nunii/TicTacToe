@@ -1,4 +1,4 @@
-#pragma once
+
 #include <string>
 #include <iostream>
 #include "Board.h"
@@ -19,4 +19,3 @@ class Player {
         
     
 };
-
