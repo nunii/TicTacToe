@@ -1,3 +1,5 @@
 #include "Player.h"
 
- Player :: getChar(){return myChar;}
+ char Player :: getChar()const{
+  return myChar;
+ }
