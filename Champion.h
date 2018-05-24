@@ -1,6 +1,6 @@
 #pragma once
 
-#include "DummyPlayers.h"
+#include "Player.h"
 
 
 class Champion: public Player {
